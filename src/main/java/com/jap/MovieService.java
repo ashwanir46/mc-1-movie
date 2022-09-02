@@ -7,15 +7,24 @@ public class MovieService {
     public Map<Movie,Integer> getMovieWithRating(){
 
         //create five movie object by calling Movie class parameterized constructor
+        Movie movie1 = new Movie(1425, "Sanju", "Comedy", "01/05/2022");
+        Movie movie2 = new Movie(4512, "Anek", "Action", "01/05/2022");
+        Movie movie3 = new Movie(6854, "Runway", "Comedy", "01/05/2022");
+        Movie movie4 = new Movie(0175, "Dobaaraa", "Action", "01/05/2022");
+        Movie movie5 = new Movie(3541, "Karthikeya", "Comedy", "01/05/2022");
 
         //create HashMap object and add all the Movie object inside it
+        Map<Movie, Integer> movieIntegerMap = new HashMap<>();
 
         //Key will be movie object and value will be rating ranging from 1 to 5
+        movieIntegerMap.put(movie1, 2);
+        movieIntegerMap.put(movie2, 5);
+        movieIntegerMap.put(movie3, 4);
+        movieIntegerMap.put(movie4, 4);
+        movieIntegerMap.put(movie5, 3);
 
         //return the HashMap object
-        Map map = new HashMap();
-
-        return map;
+        return movieIntegerMap;
     }
 
     public Set<String> getMovieNameWithRating4(Map<Movie,Integer> map,int rating){
